@@ -1,0 +1,32 @@
+.cfa-header {
+  background: linear-gradient(135deg, var(--secondary-color), #2980b9);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.cfa-header img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1rem;
+}
+
+.cfa-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.cfa-header .subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.cfa-main {
+  padding: 2rem 0;
+}
+
+.cfa-footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: var(--light-color);
+}
