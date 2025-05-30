@@ -1,0 +1,302 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --light-color: #ecf0f1;
+  --dark-color: #2c3e50;
+  --text-color: #333;
+  --text-light: #7f8c8d;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+.main-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: white;
+  padding: 5px;
+}
+
+.title-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.registration {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* About Section */
+.about-section {
+  padding: 2rem 0;
+}
+
+.about-content h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  font-size: 1.8rem;
+}
+
+.about-content h2:after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-color);
+  margin: 0.5rem auto 0;
+}
+
+.about-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.institute-list {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.institute-list li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.institute-list li:before {
+  content: '✓';
+  color: var(--secondary-color);
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.about-image {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.about-image img:hover {
+  transform: scale(1.02);
+}
+
+/* Schools Container */
+.schools-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem auto;
+}
+
+.school-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.school-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.cfa-card {
+  border-top: 5px solid var(--secondary-color);
+}
+
+.cfea-card {
+  border-top: 5px solid var(--accent-color);
+}
+
+.school-logo {
+  padding: 1.5rem;
+  background: var(--light-color);
+}
+
+.school-logo img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.school-info {
+  padding: 1.5rem;
+}
+
+.school-info h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.school-info p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.school-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  font-size: 0.95rem;
+}
+
+.school-btn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* Transition Screen */
+.transition-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+
+.transition-screen.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.transition-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .logo-title-container {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    gap: 2rem;
+  }
+  
+  .about-grid {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .about-text {
+    flex: 1;
+  }
+  
+  .about-image {
+    flex: 1;
+    margin-top: 0;
+  }
+  
+  .schools-container {
+    flex-direction: row;
+  }
+  
+  .school-card {
+    flex: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-header {
+    padding: 1.5rem 0;
+  }
+  
+  .title-container h1 {
+    font-size: 2.2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .about-content h2 {
+    font-size: 2rem;
+  }
+}
