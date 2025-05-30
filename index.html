@@ -1,27 +1,89 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Career Foundation Educational Academy</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="banner-container">
-    <img class="banner" src="images/banner.png" alt="Welcome Banner" />
-  </div>
+  <!-- Header with Logo and Title -->
+  <header class="main-header">
+    <div class="header-content">
+      <div class="logo-title-container">
+        <img src="images/logo.png" alt="Career Foundation Logo" class="main-logo">
+        <div class="title-container">
+          <h1>THE CAREER FOUNDATION</h1>
+          <p class="subtitle">Educational Academy, Imphal</p>
+          <p class="registration">Reg. No. 425/22 under I.T. Act 1882 Registration Act 1908</p>
+        </div>
+      </div>
+    </div>
+  </header>
 
-  <div class="buttons">
-    <button onclick="showTransitionAndRedirect('cfa.html')">Visit CFA</button>
-    <button onclick="showTransitionAndRedirect('cfea.html')">Visit CFEA</button>
+  <div class="container">
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="about-content">
+        <h2>Welcome to Our Educational Community</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>The Career Foundation Educational Academy is a premier educational trust committed to providing quality education in Manipur. Established with a vision to create transformative learning experiences, we operate two prestigious institutions under our umbrella:</p>
+            
+            <ul class="institute-list">
+              <li>
+                <strong>Career Foundation Academy (CFA):</strong> Our academic excellence wing focusing on comprehensive K-12 education
+              </li>
+              <li>
+                <strong>Career Foundation Educational Academy (CFEA):</strong> Our technical and vocational education division
+              </li>
+            </ul>
+            
+            <p>With state-of-the-art facilities, experienced faculty, and innovative teaching methodologies, we are shaping the future of education in Northeast India. Our registered trust status ensures transparency and commitment to our educational mission.</p>
+          </div>
+          <div class="about-image">
+            <img src="images/campus-view.jpg" alt="Our Campus">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- School Sections -->
+    <div class="schools-container">
+      <div class="school-card cfa-card">
+        <div class="school-logo">
+          <img src="images/cfa_logo.png" alt="CFA Logo">
+        </div>
+        <div class="school-info">
+          <h3>Career Foundation Academy</h3>
+          <p>Academic Excellence • Holistic Development • Future Leaders</p>
+          <button class="school-btn" onclick="showTransitionAndRedirect('cfa/index.html', 'images/cfa_logo.png')">
+            Explore CFA
+          </button>
+        </div>
+      </div>
+      
+      <div class="school-card cfea-card">
+        <div class="school-logo">
+          <img src="images/cfea_logo.png" alt="CFEA Logo">
+        </div>
+        <div class="school-info">
+          <h3>Career Foundation English Academy</h3>
+          <p>Vocational Training • Skill Development • Industry Ready</p>
+          <button class="school-btn" onclick="showTransitionAndRedirect('cfea/index.html', 'images/cfea_logo.png')">
+            Explore CFEA
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Transition Screen -->
   <div id="transition" class="transition-screen">
-    <img src="images/cfea_logo.png" alt="Transition Logo" class="transition-logo" />
+    <img src="" alt="Transition Logo" class="transition-logo" id="transition-logo">
   </div>
 
-  <script src="transition.js"></script>
+  <script src="js/transition.js"></script>
 </body>
 </html>
