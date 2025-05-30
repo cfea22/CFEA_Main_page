@@ -22,7 +22,7 @@ body {
 .main-header {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
@@ -36,56 +36,67 @@ body {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .main-logo {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
+  border-radius: 50%;
+  background: white;
+  padding: 5px;
 }
 
 .title-container h1 {
   margin: 0;
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .subtitle {
   margin: 5px 0 0;
   font-weight: 300;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   opacity: 0.9;
+  text-align: center;
 }
 
 .registration {
   margin: 5px 0 0;
   font-size: 0.8rem;
   opacity: 0.8;
+  text-align: center;
 }
 
 /* About Section */
 .about-section {
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 
 .about-content {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .about-content h2 {
   color: var(--primary-color);
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
   position: relative;
   padding-bottom: 10px;
+  text-align: center;
 }
 
 .about-content h2:after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 80px;
   height: 4px;
   background: var(--accent-color);
@@ -93,20 +104,20 @@ body {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1fr;
+  gap: 30px;
   align-items: center;
 }
 
 .about-text p {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-  line-height: 1.8;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 .institute-list {
   padding-left: 20px;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 
 .institute-list li {
@@ -126,7 +137,9 @@ body {
 .about-image {
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .about-image img {
@@ -143,9 +156,11 @@ body {
 /* Schools Container */
 .schools-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 30px;
-  margin: 4rem auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin: 3rem auto;
+  padding: 0 20px;
+  max-width: 1200px;
 }
 
 .school-card {
@@ -155,11 +170,12 @@ body {
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
+  flex-direction: column;
 }
 
 .school-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 .cfa-card {
@@ -171,26 +187,28 @@ body {
 }
 
 .school-logo {
-  padding: 30px;
+  padding: 25px;
   background: rgba(255,255,255,0.9);
   display: flex;
   align-items: center;
+  justify-content: center;
+  min-height: 150px;
 }
 
 .school-logo img {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   object-fit: contain;
 }
 
 .school-info {
-  padding: 30px;
-  flex: 1;
+  padding: 25px;
 }
 
 .school-info h3 {
   margin: 0 0 10px;
   color: var(--primary-color);
+  font-size: 1.3rem;
 }
 
 .school-info p {
@@ -208,6 +226,11 @@ body {
   cursor: pointer;
   transition: all 0.3s;
   font-weight: 600;
+  width: 100%;
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .school-btn:hover {
@@ -238,8 +261,9 @@ body {
 }
 
 .transition-logo {
-  max-width: 300px;
-  max-height: 300px;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
   animation: pulse 1.5s infinite;
 }
 
@@ -250,31 +274,70 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 900px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .about-image {
-    order: -1;
-  }
-}
-
-@media (max-width: 600px) {
+@media (min-width: 768px) {
   .logo-title-container {
-    flex-direction: column;
-    text-align: center;
+    justify-content: flex-start;
+    text-align: left;
   }
   
-  .schools-container {
-    grid-template-columns: 1fr;
+  .title-container h1,
+  .subtitle,
+  .registration {
+    text-align: left;
+  }
+  
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .about-content h2 {
+    text-align: left;
+  }
+  
+  .about-content h2:after {
+    left: 0;
+    transform: none;
   }
   
   .school-card {
-    flex-direction: column;
+    flex-direction: row;
   }
   
   .school-logo {
-    justify-content: center;
+    min-width: 150px;
+    min-height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-header {
+    padding: 2rem 0;
+  }
+  
+  .main-logo {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .title-container h1 {
+    font-size: 2.2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.4rem;
+  }
+  
+  .about-content h2 {
+    font-size: 2rem;
+  }
+  
+  .school-logo img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .transition-logo {
+    width: 200px;
+    height: 200px;
   }
 }
