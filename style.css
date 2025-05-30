@@ -1,57 +1,39 @@
-
+/* Base Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  text-align: center;
-  background-color: #f4f4f4;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Banner styles */
 .banner-container {
   width: 100%;
   overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .banner {
   width: 100%;
-  max-height: 400px;
-  object-fit: cover;
+  height: auto;
+  display: block;
 }
 
-.buttons {
-  margin-top: 20px;
+/* School sections styles */
+.school-section {
+  background: white;
+  border-radius: 8px;
+  padding: 25px;
+  margin: 30px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 18px;
-  margin: 10px;
-  cursor: pointer;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 5px;
-}
-
-.transition-screen {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  z-index: 9999;
-  justify-content: center;
-  align-items: center;
-}
-
-.transition-logo {
-  width: 200px;
-  animation: scaleLogo 1s ease-in-out infinite alternate;
-}
-
-@keyframes scaleLogo {
-  0% { transform: scale(1); opacity: 1; }
-  100% { transform: scale(1.2); opacity: 0.8; }
-}
+/* Add all other CSS styles from previous example here */
