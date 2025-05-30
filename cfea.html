@@ -1,13 +1,32 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CFEA Branch</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Foundation Educational Academy</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="assets/css/cfea.css">
 </head>
 <body>
-  <h1>Welcome to The Career Foundation English Academy (CFEA)</h1>
-  <p>This is the CFEA-specific page with CFEA-related news and updates.</p>
+  <header class="cfea-header">
+    <img src="../images/cfea_logo.png" alt="CFEA Logo">
+    <h1>Career Foundation Educational Academy</h1>
+  </header>
+  
+  <main class="cfea-main">
+    <!-- CFEA specific content here -->
+  </main>
+  
+  <footer class="cfea-footer">
+    <button onclick="showTransitionAndRedirect('../index.html', '../images/cfea_logo.png')">
+      Back to Main Campus
+    </button>
+  </footer>
+  
+  <div id="transition" class="transition-screen">
+    <img src="" alt="Transition Logo" class="transition-logo" id="transition-logo">
+  </div>
+  
+  <script src="../js/transition.js"></script>
 </body>
 </html>
