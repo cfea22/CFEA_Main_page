@@ -1,0 +1,32 @@
+.cfea-header {
+  background: linear-gradient(135deg, var(--accent-color), #c0392b);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.cfea-header img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1rem;
+}
+
+.cfea-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.cfea-header .subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.cfea-main {
+  padding: 2rem 0;
+}
+
+.cfea-footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: var(--light-color);
+}
